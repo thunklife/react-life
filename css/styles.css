@@ -5,6 +5,10 @@
   display: inline-block;
 }
 
+.grid-cell.alive{
+  background-color: black;
+}
+
 .grid-row{
   margin: 0;
   padding: 0;
