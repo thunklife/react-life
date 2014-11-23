@@ -1,0 +1,22 @@
+{
+  "name": "life",
+  "version": "0.0.0",
+  "description": "conway's game of life",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify -t reactify src/app.js > build/app.js",
+    "start": "http-server"
+  },
+  "author": "wilhelmson",
+  "license": "BSD3",
+  "dependencies": {
+    "react": "^0.12.1"
+  },
+  "devDependencies": {
+    "browserify": "^6.3.2",
+    "http-server": "^0.7.3",
+    "lodash.range": "^2.4.1",
+    "reactify": "^0.17.1"
+  }
+}

@@ -1,0 +1,22 @@
+.grid-cell{
+  height: 10px;
+  width: 10px;
+  border-left: 1px solid black;
+  display: inline-block;
+}
+
+.grid-row{
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  font-size: 0;
+}
+
+.grid-row:last-child{
+  border-bottom: 1px solid black;
+}
+
+.grid{
+  display: inline-block;
+}
