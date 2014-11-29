@@ -1,19 +1,14 @@
 var React = require('react');
 
 var Cell = React.createClass({
-  getInitialState: function(){
-    return {
-      alive: false 
-    };
-  },
-  componentWillMount: function(){
-    this.setState({alive: this.props.alive});
-  },
   cellClicked: function(e){
-   this.setState({alive: !this.state.alive}); 
+    var x = this.props.x;
+    var y = this.props.y;
+    this.props.click(x,y);
+   
   },
   render: function(){
-    var className = this.state.alive ? 'alive' : '';
+    var className = this.props.alive ? 'alive' : '';
     return (
       <span className={className + ' grid-cell'} onClick={this.cellClicked}></span>
     )
