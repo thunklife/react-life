@@ -1,23 +1,75 @@
+.container{
+  width: 600px;
+  margin: 0 auto;
+}
+
+.site{
+  background-color: black;
+}
+.main{
+  background-color: #f7f7f7;
+}
+
+footer{
+  padding: 20px 0 0 0;
+  color: white;
+  text-align: center;
+}
+
+.about{
+  padding: 20px 0;
+  box-shadow: 0px 1px 2px rgba(0,0,0,.1);
+  background-color: white;
+  position:relative;
+  z-index: 2;
+}
+
+.about h1{
+  margin-top: 0;
+}
+
+.section{
+  padding: 20px;
+  background-color: white;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
 .grid-cell{
   height: 10px;
   width: 10px;
-  border: 1px solid black;
-  border-radius: 10px;
+  border-left: 1px solid #525252;
   display: inline-block;
-  margin: 2px;
   cursor: pointer;
 }
 
+.grid-cell:last-child{
+  border-right: 1px solid #525252;
+}
+
 .grid-cell.alive{
-  background-color: black;
+  background-color: #525252;
 }
 
 .grid-row{
   margin: 0;
   padding: 0;
   font-size: 0;
+  border-top: 1px solid #525252;
+}
+.grid-row:last-child{
+  border-bottom: 1px solid #525252;
 }
 
-.grid{
-  display: inline-block;
+.grid, .controls{
+  width: 510px;
+  margin: 0 auto 20px;
+}
+
+.controls{
+  margin-bottom: 0;
+}
+
+.pull-right{
+  float: right;
 }

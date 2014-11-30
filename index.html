@@ -4,10 +4,27 @@
     <title>React Life</title>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/semantic.min.css"/>
   </head>
-  <body>
-    <div id="main">
-    </div>
-    <script src="build/app.js"></script>
+  <body class="site">
+      <div class="about">
+        <div class="container">
+          <h1>React Life</h1>
+          <p>An implementation of <a href="/">Conway's Game of Life</a> using <a href="/">ReactJS</a>
+        </div>
+      </div>
+      <div class="ui main">
+        <div class="section container">
+          <div id="game">
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="meta container">
+          <p>Built  by <a href="/">wilhelmson</a></p>
+          <p><a href="/"><i class="icon github"></i></p>
+        </div>
+      </footer>
+      <script src="build/app.js"></script>
   </body>
 </html>

@@ -2,13 +2,20 @@ var range = require('lodash.range');
 
 module.exports = function conway(height, width){
 
-  var cells = range(height).map(function(row){
-      return range(width).map(function(){
-        return false;
-      });
-    });
+  var h = height;
+  var w = width;
+  var cells;
   return {
-    firstGen: function(){
+    firstGen: function(seed){
+      cells = build();
+      if(seed){
+        cells[21][25] = true;
+        cells[22][24] = true;
+        cells[23][24] = true;
+        cells[23][25] = true;
+        cells[23][26] = true;
+        cells[24][25] = true;
+      }
       return cells;
     },
     toggleCell: function(x,y){
@@ -21,8 +28,16 @@ module.exports = function conway(height, width){
          return isAlive(cell,i,j);
         });
       });
-    }
+    },
   };
+
+  function build(){
+    return range(h).map(function(row){
+      return range(w).map(function(){
+        return false;
+      });
+    });
+  }
 
   function isAlive(cell,x,y){
     var neighbors = getNeighbors(x,y);
@@ -41,7 +56,7 @@ module.exports = function conway(height, width){
     var ns = offsets.reduce(function(a,o){
       var newX = x + o[0],
           newY = y + o[1];
-      if((newX < 0 || newY < 0) || (newX > cells[0].length-1 || newY > cells[1].length-1)) return a;
+      if((newX < 0 || newY < 0) || (newX >= (cells.length-1) || newY >= (cells[0].length-1))) return a;
       a.push([newX,newY]);
       return a;
     }, []);
